@@ -35,7 +35,7 @@
       renderer.setSize(window.innerWidth, window.innerHeight);
       document.body.appendChild(renderer.domElement);
 
-      rainGeo = new THREE.Geometry();
+      rainGeo = new THREE.BufferGeometry();
       for(let i=0;i<rainCount;i++) {
         rainDrop = new THREE.Vector3(
           Math.random() * 400 -200,
