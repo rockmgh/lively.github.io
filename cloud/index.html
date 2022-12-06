@@ -5,8 +5,9 @@
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <title></title>
   </head>
-  <body>    
-    <script src="three.min.js"></script>
+  <body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r122/three.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- <script src="three.min.js"></script> -->
     <script>
     let scene,camera, renderer, cloudParticles = [], flash, rain, rainGeo, rainCount = 15000;
     function init() {
@@ -35,7 +36,7 @@
       renderer.setSize(window.innerWidth, window.innerHeight);
       document.body.appendChild(renderer.domElement);
 
-      rainGeo = new THREE.BufferGeometry();
+      rainGeo = new THREE.Geometry();
       for(let i=0;i<rainCount;i++) {
         rainDrop = new THREE.Vector3(
           Math.random() * 400 -200,
